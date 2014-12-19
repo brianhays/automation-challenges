@@ -56,7 +56,7 @@ PLAY RECAP ********************************************************************
 10.131.118.82             : ok=3    changed=2    unreachable=0    failed=0    
 ```
 
-updated wdigetfile:
+updated widgetfile:
 ```
 option 1234
 speed 88mph
