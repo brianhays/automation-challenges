@@ -1,0 +1,11 @@
+---
+# install template file generated content to all hosts in group "widgets"
+- hosts: widgets
+  tasks:
+  - name: Grab output from 'facter -p widget' on each host
+    command: facter -p widget
+    register: facter_widget
+  - name: Copy widget file to hosts
+    template: src=widgetfile.j2 dest=/etc/widgetfile
+    with_items: facter_widget.stdout_lines
+

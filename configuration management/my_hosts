@@ -1,0 +1,3 @@
+[widgets]
+### server 1 (FQDN or IP address - enter one per line (ranges work too: (db[01:10].example.com)))
+### server 2, etc...
