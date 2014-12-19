@@ -1,6 +1,7 @@
 ---
-# install template file generated content to all hosts in group "widgets"
+# install template file with generated content to all hosts in group "widgets"
 - hosts: widgets
+  remote_user: root
   tasks:
   - name: Grab output from 'facter -p widget' on each host
     command: facter -p widget
