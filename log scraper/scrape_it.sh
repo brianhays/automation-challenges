@@ -34,7 +34,7 @@ FETCHED_TOTAL=$(grep -c $GET_URL $LOG_FILE)
 FETCHED_NOT_200=$(grep $GET_URL $LOG_FILE | awk '{print $9}' | grep -vc 200)
 
 # total number of times Apache returned ANY code other than 200
-TOTAL_NON_200=$(cat $LOG_FILE | awk '{print $9}' | grep -vc 200)
+TOTAL_NON_200=$(grep -v ^$ $LOG_FILE | awk '{print $9}' | grep -vc 200)
 
 # total number of PUT requests to the PUT_URL
 PUT_REQ=$(grep -c "PUT $PUT_URL" $LOG_FILE)
