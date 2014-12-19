@@ -11,7 +11,11 @@ scrape_it.sh will scrape Apache's "common" format logs for the following items:
 You may either clone the project or copy the scrape_it.sh file to any *nix-based system (Mac OSX included of course). The script will assume that a logfile named "puppet_access_ssl.log" resides in the same directory, however you can also pass a file name as an argument when running the script (such as: "sh scrape_it.sh myfile.log") - optional log file should be in apache common log format)
 
 run the script via:
-    sh scrape_it.sh
+```
+sh scrape_it.sh
+```
 
 or (with different log file):
-    sh scrape_it.sh /var/log/httpd/access_log
+```
+sh scrape_it.sh /var/log/httpd/access_log
+```
